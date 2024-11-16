@@ -1,0 +1,65 @@
+<!doctype html>
+<html> 
+ <head></head> 
+ <body> 
+  <h1> Personal Details</h1> <label for="idNumber"> ID Number</label> 
+  <input id="idNumber"> 
+  <p id="uniq"></p> <button onclick="idetails();
+   "> Run</button> 
+  <p id="edetails"></p> <label for="idDayswork"> Nos of Days</label> 
+  <input id="idDayswork" type="number"> 
+  <br> <label for="idRate">Pay Rate</label> 
+  <input id="idRate" type="number">
+  <br> 
+  <br> <button onclick="epayroll();
+  ">Compute </button> 
+  <script>
+    
+    function idetails() {
+      
+      const ajose = {
+        fname: "Lan",
+        lname: "Joe",
+        age:    25 ,
+        sex:   "male",
+        status: "Regular"
+      };
+
+    let numvalue = document.getElementById
+     ("idNumber").value;
+    
+    let  idnos;
+    
+    if(isNaN(numvalue) ||  numvalue <  1234 || numvalue > 1234 ){
+      idnos = "not valid";
+      } else{
+        idnos = ajose.fname;
+      }
+     document.getElementById("edetails")
+     .innerHTML = idnos;
+  
+    }
+   
+   
+    
+  function epayroll() {
+   
+   const daysValue = document.getElementById
+   ("idDayswork");
+   
+   let edays = daysValue.value;       
+   
+   const rateValue = document.getElementById
+   ("idRate");
+  
+   let erate = rateValue.value;
+   
+    let ecompute;
+     document.getElementById("profiler")
+     .innerHTML = ecompute = (edays) * (erate);
+  }
+ 
+  </script> 
+  <p id="profiler"></p> 
+ 
+</body></html>
